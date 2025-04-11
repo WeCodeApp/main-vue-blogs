@@ -1,0 +1,24 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Welcome to the blog",
+      "body": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore modi adipisci ad voluptas delectus. Corporis aspernatur inventore aut molestiae doloremque neque sunt quas enim, vero voluptatum nobis animi ipsa alias quia fuga quibusdam eaque facilis illo totam dolor deleniti, voluptas itaque iste dicta. Consectetur vel placeat harum perspiciatis corporis repudiandae in, esse dolores est quod saepe, facere temporibus delectus a veniam inventore exercitationem rem voluptates illo? Reprehenderit quia accusantium adipisci cupiditate sapiente nulla sed possimus dolorum, itaque dolore ut velit. Non tenetur soluta aspernatur sapiente quos. Ex dolore amet similique maiores, sunt quae hic quibusdam totam laboriosam commodi iusto accusantium dignissimos culpa autem, iste sequi laudantium mollitia magni. Explicabo rerum vitae minus odio dolorem harum nam nisi, nobis non? Eius magni, voluptatibus aliquid labore maiores ut et non laborum officiis eum temporibus rerum excepturi quidem tempore animi fuga laudantium similique mollitia minima. Voluptate doloremque impedit sed dicta, illum eum ad!",
+      "tags": [
+        "webdev",
+        "coding",
+        "news"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Top 5 CSS Tips",
+      "body": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore modi adipisci ad voluptas delectus. Corporis aspernatur inventore aut molestiae doloremque neque sunt quas enim, vero voluptatum nobis animi ipsa alias quia fuga quibusdam eaque facilis illo totam dolor deleniti, voluptas itaque iste dicta. Consectetur vel placeat harum perspiciatis corporis repudiandae in, esse dolores est quod saepe, facere temporibus delectus a veniam inventore exercitationem rem voluptates illo? Reprehenderit quia accusantium adipisci cupiditate sapiente nulla sed possimus dolorum, itaque dolore ut velit. Non tenetur soluta aspernatur sapiente quos. Ex dolore amet similique maiores, sunt quae hic quibusdam totam laboriosam commodi iusto accusantium dignissimos culpa autem, iste sequi laudantium mollitia magni. Explicabo rerum vitae minus odio dolorem harum nam nisi, nobis non? Eius magni, voluptatibus aliquid labore maiores ut et non laborum officiis eum temporibus rerum excepturi quidem tempore animi fuga laudantium similique mollitia minima. Voluptate doloremque impedit sed dicta, illum eum ad!",
+      "tags": [
+        "css",
+        "webdev",
+        "coding"
+      ]
+    }
+  ]
+}

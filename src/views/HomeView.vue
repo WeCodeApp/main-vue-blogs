@@ -1,29 +1,22 @@
 <template>
   <h1>Homepage</h1>
-  <p ref="p">My name is {{ name }} and my age is {{ age }}</p>
-  <button @click="handleClick">Click Me</button>
-  <input type="text" v-model="name">
-  <button @click="age++">Add 1 to age</button>
+  
+  <div v-if="error">{{ error }}</div>
+  <PostList :posts="posts"/>
 </template>
 
 <script>
-import { ref } from 'vue'
+import PostList from '../components/PostList.vue'
+import getPosts from '../services/getPosts'
 
 export default {
+  components: { PostList },
   setup() {
-    console.log('setup')
+    const { posts, error, load } = getPosts()
 
-    const name = ref('mario')
-    const age = ref(30)
+    load()
 
-    const p =  ref(null)
-
-    const handleClick = () => {
-      name.value = 'luigi'
-      age.value = 40
-    }
-
-    return { name, age, handleClick, p }
-  },
+    return { posts, error }
+  }
 }
 </script>
