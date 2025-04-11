@@ -1,18 +1,30 @@
-<script>
-import { RouterView } from 'vue-router'
-import Navbar from './components/Navbar.vue'
-
-export default {
-  components: { Navbar }
-}
-</script>
-
 <template>
   <Navbar />
   <RouterView />
 </template>
 
-<style scoped>
+<script setup>
+import Navbar from './components/Navbar.vue'
+import { onMounted } from 'vue'
+import { msalService } from './config/useAuth'
+import { msalInstance } from './config/msalConfig'
+const { handleRedirect, registerAuthorizationHeaderInterceptor } = msalService()
+
+const initialize = async () => {
+  try {
+    await msalInstance.initialize()
+    registerAuthorizationHeaderInterceptor() // Call the initialize function
+  } catch (error) {
+    console.log('Initialization error', error)
+  }
+}
+onMounted(async () => {
+  await initialize()
+  await handleRedirect()
+})
+</script>
+
+<style>
 header {
   line-height: 1.5;
   max-height: 100vh;
@@ -26,7 +38,7 @@ header {
 nav {
   width: 100%;
   font-size: 12px;
-  text-align: center;
+  text-align: right;
   margin-top: 2rem;
 }
 
@@ -52,7 +64,6 @@ nav a:first-of-type {
   header {
     display: flex;
     place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
   }
 
   .logo {
@@ -66,7 +77,7 @@ nav a:first-of-type {
   }
 
   nav {
-    text-align: left;
+    text-align: right;
     margin-left: -1rem;
     font-size: 1rem;
 
