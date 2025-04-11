@@ -9,14 +9,17 @@
 <script>
 import { handleError } from 'vue'
 import getPost from '../services/getPost'
-import { useRouter } from 'vue-router'
+import { useRoute } from 'vue-router'
+
 export default {
     props: ['id'],
     setup(props) {
-        const { post, error, load } = getPost(props.id)
+
+        const route = useRoute()
+
+        const { post, error, load } = getPost(route.params.id)
 
         load()
-        const router = useRouter()
 
         const handleClick = () => {
             console.log(router)
